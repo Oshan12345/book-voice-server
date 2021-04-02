@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Live Site [Live site](https://github.com/facebook/create-react-app).
+Live Site url [click here](https://book-voice.netlify.app/).
 
 ## Project name - book-voice
 
@@ -17,4 +17,4 @@ This is simple **MERN** fullstack project.
 
 
 
-Clint Side code [server side](https://github.com/facebook/create-react-app).
+Clint Side code [click here](https://github.com/Porgramming-Hero-web-course/full-stack-client-Oshan12345).

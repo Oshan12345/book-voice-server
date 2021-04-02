@@ -62,7 +62,6 @@ client.connect((err) => {
   // get all order placed by a single user
   app.get("/getOrderDetails/:email", (req, res) => {
     const email = req.params.email;
-    console.log(email);
     placedOrder.find({ email }).toArray((err, document) => {
       res.send(document);
     });
@@ -76,9 +75,7 @@ client.connect((err) => {
   //update product
   app.patch("/updateProduct/:id", (req, res) => {
     const id = req.params.id;
-    console.log(req.body, id);
     updateProduct = req.body;
-    console.log(updateProduct);
     productsCollection
       .updateOne(
         { _id: ObjectId(id) },
@@ -92,9 +89,8 @@ client.connect((err) => {
   //delete a product
   app.delete("/delete/:id", (req, res) => {
     const id = req.params.id;
-    console.log("hello", id);
+
     productsCollection.deleteOne({ _id: ObjectId(id) }).then((result) => {
-      console.log(result);
       res.send({ message: "deleted successfully" });
     });
   });
