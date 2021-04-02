@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
-const port = 4000;
 require("dotenv").config();
+const port = 4000;
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const ObjectId = require("mongodb").ObjectId;
 const MongoClient = require("mongodb").MongoClient;
-console.log(process.env.DB_HOST);
-const uri = `mongodb+srv://${process.env.DB_User}:${process.env.DB_PASS}@cluster0.ocnvo.mongodb.net/${process.env.DB_HOST}?retryWrites=true&w=majority`;
+
+const uri = `mongodb+srv://${process.env.DB_User}:${process.env.DB_PASS}@cluster0.ocnvo.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -17,7 +17,7 @@ const client = new MongoClient(uri, {
 });
 client.connect((err) => {
   const productsCollection = client
-    .db(`${process.env.DB_HOST}`)
+    .db(`${process.env.DB_NAME}`)
     .collection("booksCollection");
   const placedOrder = client.db("book_voice").collection("placedOrder");
   // perform actions on the collection object
@@ -123,6 +123,6 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
+app.listen(process.env.DB_PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
