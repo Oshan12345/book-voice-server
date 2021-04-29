@@ -17,4 +17,4 @@ This is simple **MERN** fullstack project.
 
 
 
-Clint Side code [click here](https://github.com/Oshan12345/book-voice-client).
+Clint Side code [click here](https://github.com/sagar-biswas1/book-voice-client).
