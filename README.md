@@ -17,4 +17,4 @@ This is simple **MERN** fullstack project.
 
 
 
-Clint Side code [click here](https://github.com/Porgramming-Hero-web-course/full-stack-client-Oshan12345).
+Clint Side code [click here](https://github.com/Oshan12345/book-voice-client).
