@@ -4,7 +4,7 @@ Live Site url [click here](https://book-voice.netlify.app/).
 
 ## Project name - book-voice
 
-This is simple **MERN** fullstack project.  
+This is **MERN** fullstack project.  
 
 
 > ### API for
